@@ -357,7 +357,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (confirm('Are you sure you want to start a new trip? All current data will be cleared.')) {
             localStorage.removeItem('tripSplitterData');
             participants = [];
+            expensePaidBySelect.innerHTML = "";   // clears old names
+            expensePaidBySelect.value = "";      
             expenses = [];
+            
             currentCurrencySymbol = '$'; // Reset to default
             nextExpenseId = 1;
             currencySelect.value = '$'; // Reset currency dropdown
@@ -379,3 +382,4 @@ document.addEventListener('DOMContentLoaded', () => {
         // Settlement summary is hidden by default and shown after calculation
     }
 });
+
