@@ -361,6 +361,11 @@ document.addEventListener('DOMContentLoaded', () => {
             currentCurrencySymbol = '$'; // Reset to default
             nextExpenseId = 1;
             currencySelect.value = '$'; // Reset currency dropdown
+            // CLEAR SETTLEMENT UI
+            settlementList.innerHTML = "";
+            totalExpensesDisplay.textContent = "";
+            noSettlementNeeded.classList.add("hidden");
+            settlementSummaryDiv.classList.add("hidden");
 
             renderAll();
             hideSettlementSummary();
